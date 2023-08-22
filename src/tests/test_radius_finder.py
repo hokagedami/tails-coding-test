@@ -13,12 +13,6 @@ class Test(TestCase):
         postcode = "SW1A 1AA"
         radius = 10
         stores_result = radius_finder.get_stores_in_postcode_radius(postcode, radius, self.mock_stores_data)
-        self.assertEqual(len(stores_result), 0)
-
-    def test_get_stores_in_postcode_radius(self):
-        postcode = "SW1A 1AA"
-        radius = 10
-        stores_result = radius_finder.get_stores_in_postcode_radius(postcode, radius, self.mock_stores_data)
         self.assertEqual(len(stores_result), 5)
 
     def test_get_stores_in_postcode_radius_with_invalid_postcode(self):
